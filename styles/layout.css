@@ -73,3 +73,52 @@ body {
   align-items: center;
   justify-content: center;
 }
+
+#start-curtain {
+  position: absolute;
+  inset: 0;
+  z-index: 40;
+  background: radial-gradient(circle at 50% 45%, rgba(20, 24, 52, 0.86), rgba(0, 0, 0, 0.97));
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: opacity 0.65s ease;
+}
+
+#start-curtain.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.curtain-title {
+  font-family: var(--font-zh-title);
+  font-size: clamp(32px, 4.4vw, 74px);
+  font-weight: 800;
+  letter-spacing: 0.58em;
+  padding-left: 0.58em;
+  color: var(--cream-bright);
+}
+
+.curtain-sub {
+  margin-top: 0.65em;
+  font-family: var(--font-en-display);
+  font-size: clamp(11px, 1.05vw, 17px);
+  letter-spacing: 0.42em;
+  padding-left: 0.42em;
+  color: rgba(242, 235, 220, 0.84);
+}
+
+.curtain-btn {
+  margin-top: 2.2em;
+  padding: 0.78em 2.4em;
+  border: 1px solid rgba(232, 160, 52, 0.62);
+  background: rgba(232, 160, 52, 0.12);
+  color: var(--cream-bright);
+  font-family: var(--font-mono);
+  font-size: clamp(11px, 0.9vw, 14px);
+  letter-spacing: 0.24em;
+  border-radius: 2px;
+  cursor: pointer;
+}

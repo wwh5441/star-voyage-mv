@@ -91,28 +91,6 @@
   color: rgba(232, 160, 52, 0.92);
 }
 
-/* Operator HUD badge during Climax Act 11 (ResNet / Attention / SVD / 8B) */
-#operator-badge {
-  position: absolute;
-  top: 7%;
-  left: 4.5%;
-  font-family: var(--font-mono);
-  font-size: clamp(10px, 0.92vw, 15px);
-  letter-spacing: 0.18em;
-  color: var(--amber-accent);
-  background: rgba(12, 12, 24, 0.64);
-  border-left: 2px solid var(--amber-accent);
-  padding: 5px 12px;
-  opacity: 0;
-  transform: translateX(-8px);
-  transition: opacity 0.3s ease, transform 0.35s var(--ease-cinema);
-}
-
-#operator-badge.is-visible {
-  opacity: 1;
-  transform: translateX(0);
-}
-
 #black-card-layer {
   position: absolute;
   inset: 0;
