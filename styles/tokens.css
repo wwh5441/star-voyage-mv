@@ -1,0 +1,18 @@
+:root {
+  --bg-void: #000000;
+  --ink-dark: #12101d;
+  --cream-primary: #f2ebdc;
+  --cream-bright: #fbf6ea;
+  --cream-muted: #938c7e;
+  --amber-accent: #e8a034;
+  --cyan-signal: #74cef5;
+  --border-subtle: rgba(242, 235, 220, 0.16);
+
+  --font-zh-title: "Songti SC", "STSong", "Hiragino Mincho ProN", "Noto Serif SC", serif;
+  --font-zh-display: "Songti SC", "STSong", "Hiragino Mincho ProN", "Noto Serif SC", serif;
+  --font-en-display: "Optima", "Futura", "Avenir Next", "Helvetica Neue", sans-serif;
+  --font-mono: "SF Mono", "Menlo", "Monaco", monospace;
+
+  --letterbox-bar: 12.2%;
+  --ease-cinema: cubic-bezier(0.22, 1, 0.36, 1);
+}
