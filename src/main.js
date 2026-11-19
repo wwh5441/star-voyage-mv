@@ -23,6 +23,7 @@ const pipeline = new MoebiusPostPipeline(renderer, initSz.w * dpr, initSz.h * dp
 const scenes = createSceneRegistry();
 const overlay = new OverlayController();
 const audio = new WecAudioController("./assets/xinghang.wec");
+audio.preload();
 
 let started = false;
 

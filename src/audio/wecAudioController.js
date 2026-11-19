@@ -40,11 +40,22 @@ export class WecAudioController {
     await this.loadingPromise;
   }
 
+  preload() {
+    return this._ensureLoaded().catch((err) => {
+      console.warn("WEC preload warning:", err);
+    });
+  }
+
   async _ensureGraph() {
-    await this._ensureLoaded();
     if (!this.ctx) {
       const AC = window.AudioContext || window.webkitAudioContext;
       this.ctx = new AC({ sampleRate: this.sampleRate });
+    }
+    if (this.ctx.state === "suspended") {
+      this.ctx.resume().catch(() => {});
+    }
+    await this._ensureLoaded();
+    if (!this.worklet) {
       await this.ctx.audioWorklet.addModule(new URL("./dsp/cwc-worklet.js", import.meta.url));
       this.worklet = new AudioWorkletNode(this.ctx, "cabron-wec-processor", {
         numberOfInputs: 0,
